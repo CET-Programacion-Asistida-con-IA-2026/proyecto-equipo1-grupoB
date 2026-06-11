@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plataforma Conectando Comedores</title>
+  <meta name="description" content="Punto de encuentro para registrar comedores, sumarse como voluntario y proponer ideas solidarias." />
+</head>
+
+<body>
+
+  <header>
+    <div>
+      <div class="logotipo">
+        <span>🌿</span>
+        <strong>Red Comedores</strong>
+      </div>
+      <nav aria-label="Navegación principal">
+        <a href="#quienes">¿Quiénes somos?</a>
+        <a href="#colabora">Colaborá</a>
+        <a href="#buscador">Encontrá tu Comedor</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="inicio">
+    <h1>Punto de encuentro y <br><span>atención comunitaria</span></h1>
+    <p>
+      Somos una plataforma de impacto social que conecta a personas, 
+      voluntarios e ideas con los comedores y merenderos que más lo necesitan.
+    </p>
+    <div>
+      <a href="#buscador">Buscar un comedor 📍</a>
+      <a href="#colabora">Quiero colaborar 🧡</a>
+    </div>
+  </section>
+
+  <main>
+
+    <section id="quienes">
+      <h2>¿Quiénes somos? 🤝</h2>
+      <p class="bajada-nosotros">Idea: Grabarnos a nosotras contando nuestro propósito.</p>
+      
+      <div class="pilares-organizacion">
+        <article>
+          <h3>Misión</h3>
+          <p>Facilitar el mapeo y la conexión eficiente entre la ayuda social y los espacios de comida comunitaria.</p>
+        </article>
+        <article>
+          <h3>Visión</h3>
+          <p>Ser la red de articulación social más grande del país, transformando intenciones en acciones reales.</p>
+        </article>
+        <article>
+          <h3>Valores</h3>
+          <p>Solidaridad, transparencia, empatía, organización y compromiso comunitario.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="colabora">
+      <h2>Elegí cómo querés sumar tu granito de arena</h2>
+      <p>Llevan a otra pestaña o sección con su formulario correspondiente.</p>
+
+      <div class="tarjetas-opciones">
+        <article class="tarjeta-rol">
+          <div class="icono">🏢</div>
+          <h3>Soy un Comedor</h3>
+          <p>Registrá tu comedor, merendero o espacio comunitario para recibir donaciones o voluntarios.</p>
+          <a href="#form-comedor">Registrar local</a>
+        </article>
+
+        <article class="tarjeta-rol">
+          <div class="icono">🤝</div>
+          <h3>Quiero ser Voluntario</h3>
+          <p>Sumate a las convocatorias de tareas diarias, apoyo escolar o logística en tu ciudad.</p>
+          <a href="#form-voluntario">Inscribirme a la red</a>
+        </article>
+
+        <article class="tarjeta-rol">
+          <div class="icono">📝</div>
+          <h3>Ideas Solidarias</h3>
+          <p>3 cositas o historias cotidianas que podemos replicar. Dejanos tu propuesta creativa.</p>
+          <a href="#form-ideas">Contar mi idea</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="buscador">
+      <h2>Encontrá tu comedor o merendero cercano</h2>
+      <p>Filtrá para inscribirte en el espacio o coordinar asistencia.</p>
+      
+      <div class="contenedor-buscador">
+        <div class="filtros">
+          <label>Filtrar por Ciudad:
+            <input type="text" placeholder="Ej: La Plata, Buenos Aires..." />
+          </label>
+          <label>Categoría:
+            <select>
+              <option>Comedor diario</option>
+              <option>Merendero / Copa de leche</option>
+              <option>Entrega de viandas</option>
+            </select>
+          </label>
+          <button type="button">Buscar espacios</button>
+        </div>
+
+        <div class="mapa-placeholder">
+          <p>[ Mapa Interactivo / Buscador Geolocalizado ]</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="formularios-registro">
+      <h2>Formularios de Registro</h2>
+      
+      <div id="form-comedor" class="bloque-formulario">
+        <h3>Formulario para Comedores y Merenderos</h3>
+        <form action="#" method="post">
+          <label>Nombre del local / comedor: <input type="text" required /></label>
+          <label>Ciudad: <input type="text" required /></label>
+          <label>Dirección exacta: <input type="text" required /></label>
+          <label>Teléfono / WhatsApp: <input type="tel" required /></label>
+          <label>Categoría (Comedor, Merendero, etc.): <input type="text" required /></label>
+          <button type="submit">Enviar registro de local</button>
+        </form>
+      </div>
+
+      <hr />
+
+      <div id="form-voluntario" class="bloque-formulario">
+        <h3>Formulario de Inscripción para Voluntarios</h3>
+        <form action="#" method="post">
+          <label>Nombre: <input type="text" required /></label>
+          <label>Apellido: <input type="text" required /></label>
+          <label>Edad: <input type="number" required /></label>
+          <label>Ciudad de residencia: <input type="text" required /></label>
+          <label>Email: <input type="email" required /></label>
+          <label>WhatsApp: <input type="tel" required /></label>
+          <button type="submit">Unirme como voluntario</button>
+        </form>
+      </div>
+
+      <hr />
+
+      <div id="form-ideas" class="bloque-formulario">
+        <h3>Contanos tu Idea Solidaria</h3>
+        <form action="#" method="post">
+          <label>Tu Nombre: <input type="text" required /></label>
+          <label>Email de contacto: <input type="email" required /></label>
+          <label>Tu propuesta o historia cotidiana (Idea de cuento): 
+            <textarea rows="4" placeholder="Escribí acá tu propuesta..." required></textarea>
+          </label>
+          <button type="submit">Enviar propuesta creativa</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div>
+      <p>© <span id="year"></span> Red Comedores - Proyecto de Impacto Social.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
