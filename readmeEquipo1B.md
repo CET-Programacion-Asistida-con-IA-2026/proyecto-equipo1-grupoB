@@ -35,7 +35,7 @@ La aplicación está dirigida a:
 
 Desarrollar una aplicación web que permita acceder fácilmente a información sobre comedores comunitarios, mostrando su ubicación y las necesidades específicas de cada uno.
 
-El objetivo es generar un puente entre los voluntarios y las organizaciones, facilitando la colaboración y aumentando el alcance de las acciones solidarias. De esta menra se contribuye con los objetivos de desarrollo sostenible de la ONU 2 y3 correspondientes a hambre cero y salud bienestar respectivamente.
+El objetivo es generar un puente entre los voluntarios y las organizaciones, facilitando la colaboración y aumentando el alcance de las acciones solidarias. De esta menra se contribuye con los objetivos de desarrollo sostenible de la ONU 2 y 3 correspondientes a hambre cero y salud bienestar respectivamente.
 
 ---
 
