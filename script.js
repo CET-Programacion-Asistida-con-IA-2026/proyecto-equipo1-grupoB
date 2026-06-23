@@ -155,7 +155,7 @@ function initFormularios() {
    3. NAVEGACIÓN SUAVE (FALLBACK EXTRA)
    ========================================================================== */
 function initNavegacionSuave() {
-    const enlacesNav = document.querySelectorAll('header nav a, #inicio div a');
+    const enlacesNav = document.querySelectorAll('header nav a, #inicio div a, #indicio div a');
 
     enlacesNav.forEach(enlace => {
         enlace.addEventListener('click', (e) => {
@@ -163,5 +163,12 @@ function initNavegacionSuave() {
             
             // Verificamos si es un enlace interno de la página
             if (targetId && targetId.startsWith('#')) {
-                const targetSection = document.querySelector
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    e.preventDefault();
+                    targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+        });
+    });
 }
