@@ -72,4 +72,8 @@ Facilitar la participación ciudadana en actividades solidarias mediante una pla
 ---
 
 ## Impacto Esperado
-
+- Conecta voluntarios con comedores comunitarios de forma rápida y accesible.
+- Aumenta la participación ciudadana en acciones solidarias.
+- Mejora la visibilidad de necesidades reales de los comedores.
+- Contribuye a reducir la inseguridad alimentaria en CABA.
+- Alineado con los ODS 2 y 3, potenciando impacto social y comunitario.
