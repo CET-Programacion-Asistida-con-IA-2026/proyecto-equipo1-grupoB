@@ -7,6 +7,9 @@
   <meta name="description" content="Punto de encuentro para registrar comedores, sumarse como voluntario y proponer ideas solidarias." />
   
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Leaflet: librería de mapas gratuita, sin API key ni tarjeta -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
 <body>
@@ -107,8 +110,11 @@
           <button type="button">Buscar espacios</button>
         </div>
 
-        <div class="mapa-placeholder">
-          <p>[ Mapa Interactivo / Buscador Geolocalizado ]</p>
+        <div class="zona-resultados">
+          <div id="lista-resultados" class="columna-lista">
+            <p class="mensaje-inicial">Usá los filtros de arriba y tocá "Buscar espacios" para ver los comedores disponibles.</p>
+          </div>
+          <div id="mapa-comedores" class="columna-mapa"></div>
         </div>
       </div>
     </section>
@@ -169,6 +175,9 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+
+  <!-- Leaflet: librería de mapas gratuita, sin API key ni tarjeta -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <script src="script.js"></script>
 </body>
