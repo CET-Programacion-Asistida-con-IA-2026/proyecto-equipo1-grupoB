@@ -434,6 +434,38 @@ main section h2 {
   margin: 0 auto;
 }
 
+/* ==========================================================================
+   SECCIÓN CONTACTO
+   ========================================================================== */
+#contacto {
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+/* Oculta visualmente pero mantiene el texto accesible para lectores de pantalla */
+.oculto-visualmente {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.datos-contacto {
+  max-width: 700px;
+  margin: 2rem auto 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  color: var(--color-secondary, #333436);
+  font-weight: 600;
+}
+
 .bloque-formulario h3 {
   font-size: 1.3rem;
   margin-bottom: 1.5rem;

@@ -126,8 +126,8 @@ function enfocarComedor(comedor, index) {
    2. PROCESAMIENTO DE FORMULARIOS (CONTACTO / REGISTROS)
    ========================================================================== */
 function initFormularios() {
-    // Seleccionamos todos los formularios dentro de la sección de registros
-    const formularios = document.querySelectorAll('#formularios-registro form');
+    // Seleccionamos todos los formularios dentro de la sección de registros y el de contacto
+    const formularios = document.querySelectorAll('#formularios-registro form, #contacto form');
 
     formularios.forEach(form => {
         form.addEventListener('submit', (e) => {
