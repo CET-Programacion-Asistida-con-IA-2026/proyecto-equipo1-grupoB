@@ -8,7 +8,6 @@
   
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Leaflet: librería de mapas gratuita, sin API key ni tarjeta -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 
@@ -65,29 +64,49 @@
 
     <section id="colabora">
       <h2>Elegí cómo querés sumar tu granito de arena</h2>
-      <p>Llevan a otra pestaña o sección con su formulario correspondiente.</p>
+      <p>Pasá el cursor sobre las tarjetas para ver cómo participar.</p>
 
       <div class="tarjetas-opciones">
-        <article class="tarjeta-rol">
-          <div class="icono">🏢</div>
-          <h3>Soy un Comedor</h3>
-          <p>Registrá tu comedor, merendero o espacio comunitario para recibir donaciones o voluntarios.</p>
-          <a href="#form-comedor">Registrar local</a>
-        </article>
+        
+        <div class="tarjeta-rol">
+          <div class="tarjeta-inner">
+            <div class="tarjeta-front">
+              <div class="icono">🏢</div>
+              <h3>Soy un Comedor</h3>
+            </div>
+            <div class="tarjeta-back">
+              <p>Registrá tu comedor, merendero o espacio comunitario para recibir donaciones o voluntarios.</p>
+              <a href="#form-comedor">Registrar local</a>
+            </div>
+          </div>
+        </div>
 
-        <article class="tarjeta-rol">
-          <div class="icono">🤝</div>
-          <h3>Quiero ser Voluntario</h3>
-          <p>Sumate a las convocatorias de tareas diarias, apoyo escolar o logística en tu ciudad.</p>
-          <a href="#form-voluntario">Inscribirme a la red</a>
-        </article>
+        <div class="tarjeta-rol">
+          <div class="tarjeta-inner">
+            <div class="tarjeta-front">
+              <div class="icono">🤝</div>
+              <h3>Quiero ser Voluntario</h3>
+            </div>
+            <div class="tarjeta-back">
+              <p>Sumate a las convocatorias de tareas diarias, apoyo escolar o logística en tu ciudad.</p>
+              <a href="#form-voluntario">Inscribirme a la red</a>
+            </div>
+          </div>
+        </div>
 
-        <article class="tarjeta-rol">
-          <div class="icono">📝</div>
-          <h3>Ideas Solidarias</h3>
-          <p>3 cositas o historias cotidianas que podemos replicar. Dejanos tu propuesta creativa.</p>
-          <a href="#form-ideas">Contar mi idea</a>
-        </article>
+        <div class="tarjeta-rol">
+          <div class="tarjeta-inner">
+            <div class="tarjeta-front">
+              <div class="icono">📝</div>
+              <h3>Ideas Solidarias</h3>
+            </div>
+            <div class="tarjeta-back">
+              <p>3 cositas o historias cotidianas que podemos replicar. Dejanos tu propuesta creativa.</p>
+              <a href="#form-ideas">Contar mi idea</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -190,17 +209,4 @@
 
   <footer>
     <div>
-      <p>© <span id="year"></span> Red Comedores - Proyecto de Impacto Social.</p>
-    </div>
-  </footer>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
-  <!-- Leaflet: librería de mapas gratuita, sin API key ni tarjeta -->
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-  <script src="script.js"></script>
-</body>
-</html>
+      <p>© <span id="year
