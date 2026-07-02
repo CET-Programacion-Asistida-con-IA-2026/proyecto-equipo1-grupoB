@@ -5,7 +5,7 @@ _Curso de Programación Asistida con IA - Chicas en Tecnología_ 🚀
 
 ## Descripción del Proyecto
 
-Este proyecto consiste en una aplicación web destinada a conectar personas interesadas en realizar voluntariados o colaborar con comedores comunitarios de la Ciudad Autónoma de Buenos Aires.
+Este proyecto consiste en una aplicación web destinada a conectar personas interesadas en realizar voluntariados o colaborar con comedores comunitarios del Área Metropolitana de Buenos Aires.
 
 La plataforma busca facilitar el acceso a información sobre los comedores, permitiendo conocer su ubicación, las necesidades actuales de cada institución y las formas de colaborar.
 
@@ -19,7 +19,7 @@ Esta falta de información dificulta la conexión entre quienes quieren colabora
 
 ### Ubicación
 
-Ciudad Autónoma de Buenos Aires, Argentina.
+Área Metropolitana de Buenos Aires, Argentina.
 
 ---
 
