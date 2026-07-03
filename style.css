@@ -14,7 +14,7 @@
   --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --max-width: 1200px;
   --border-radius: 12px;
-  --transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1); /* Transición más suave para el flip */
+  --transition: all 0.3s ease;
 }
 
 /* ==========================================================================
@@ -45,7 +45,7 @@ img {
 a {
   text-decoration: none;
   color: inherit;
-  transition: all 0.3s ease;
+  transition: var(--transition);
 }
 
 /* ==========================================================================
@@ -104,21 +104,27 @@ nav a:hover {
    SECCIÓN INICIO (HERO)
    ========================================================================== */
 #inicio {
-  max-width: var(--max-width);
+  max-width: none;
+  width: 100%;
   margin: 0 auto;
-  padding: 5rem 2rem;
+  padding: 7rem 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  background-image: linear-gradient(rgba(51, 52, 54, 0.6), rgba(51, 52, 54, 0.6)), url("img/hero-comedor.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #inicio h1 {
   font-size: 2.8rem;
   line-height: 1.2;
   margin-bottom: 1.5rem;
-  color: var(--color-dark);
+  color: var(--color-bg-white);
 }
 
 #inicio h1 span {
@@ -128,7 +134,7 @@ nav a:hover {
 #inicio p {
   font-size: 1.2rem;
   max-width: 700px;
-  color: #555;
+  color: var(--color-bg-white);
   margin-bottom: 2.5rem;
 }
 
@@ -141,7 +147,7 @@ nav a:hover {
 
 /* Botones genéricos */
 #inicio div a, 
-.tarjeta-back a, 
+.tarjeta-rol a, 
 .filtros button, 
 .bloque-formulario button {
   display: inline-block;
@@ -151,7 +157,7 @@ nav a:hover {
   cursor: pointer;
   border: none;
   font-size: 1rem;
-  transition: all 0.3s ease;
+  transition: var(--transition);
 }
 
 #inicio div a:first-child {
@@ -226,7 +232,7 @@ main section h2 {
 }
 
 /* ==========================================================================
-   SECCIÓN COLABORA (Efecto Flip en Tarjetas)
+   SECCIÓN COLABORA (Tarjetas de Opciones)
    ========================================================================== */
 .tarjetas-opciones {
   display: grid;
@@ -234,52 +240,57 @@ main section h2 {
   gap: 2rem;
 }
 
-/* Contenedor principal con perspectiva 3D */
+/* Contenedor de la tarjeta: define la perspectiva 3D y el tamaño fijo */
 .tarjeta-rol {
-  background-color: transparent;
-  height: 280px; /* Altura fija para que la estructura no colapse al girar */
-  perspective: 1000px; 
+  background: transparent;
+  height: 320px;
+  perspective: 1200px;
 }
 
-/* Sub-contenedor que realiza el giro físico */
+/* Capa que rota; contiene ambas caras superpuestas */
 .tarjeta-inner {
   position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.7s;
   transform-style: preserve-3d;
 }
 
-/* Activación del giro con el mouse */
 .tarjeta-rol:hover .tarjeta-inner {
   transform: rotateY(180deg);
 }
 
-/* Propiedades compartidas por ambas caras */
-.tarjeta-front, .tarjeta-back {
+/* Ambas caras ocupan todo el espacio, una encima de la otra */
+.tarjeta-frente,
+.tarjeta-dorso {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden; /* Soporte navegadores antiguos */
-  backface-visibility: hidden;
-  border-radius: var(--border-radius);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 2rem;
+  inset: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
-/* Cara Frontal */
-.tarjeta-front {
+.tarjeta-frente {
   background-color: var(--color-bg-light);
-  color: var(--color-dark);
 }
 
-.tarjeta-front .icono {
-  font-size: 3.5rem;
+.tarjeta-dorso {
+  background-color: #f3e2c7;
+  color: var(--color-dark);
+  transform: rotateY(180deg);
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.tarjeta-frente .icono {
+  font-size: 3rem;
   margin-bottom: 1rem;
   background-color: var(--color-bg-white);
   width: 80px;
@@ -291,33 +302,24 @@ main section h2 {
   box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 
-.tarjeta-front h3 {
+.tarjeta-frente h3 {
   font-size: 1.4rem;
   color: var(--color-dark);
 }
 
-/* Cara Trasera (rotada por defecto) */
-.tarjeta-back {
-  background-color: #f7e6cf; /* Un tono crema un poquito más oscuro para contraste */
-  transform: rotateY(180deg);
-  justify-content: space-between; /* Deja el botón abajo y el texto arriba */
-}
-
-.tarjeta-back p {
+.tarjeta-dorso p {
   font-size: 0.95rem;
-  color: #444;
-  margin-top: auto;
-  margin-bottom: auto;
+  line-height: 1.5;
 }
 
-.tarjeta-back a {
+.tarjeta-dorso a {
   background-color: var(--color-primary);
   color: var(--color-bg-white);
   width: 100%;
-  margin-top: 1rem;
+  font-weight: 700;
 }
 
-.tarjeta-back a:hover {
+.tarjeta-dorso a:hover {
   background-color: #df884c;
   transform: translateY(-2px);
 }
@@ -481,6 +483,7 @@ main section h2 {
   padding: 4rem 1.5rem;
 }
 
+/* Oculta visualmente pero mantiene el texto accesible para lectores de pantalla */
 .oculto-visualmente {
   position: absolute;
   width: 1px;
@@ -533,7 +536,7 @@ main section h2 {
   font-family: var(--font-main);
   background-color: var(--color-bg-light);
   outline: none;
-  transition: all 0.3s ease;
+  transition: var(--transition);
 }
 
 .bloque-formulario input:focus, 
