@@ -608,27 +608,3 @@ footer p {
   }
 }
 
-/* ==========================================
-   Estilos para el Video (YouTube)
-   ========================================== */
-
-/* Contenedor que mantiene la proporción del video */
-.contenedor-video {
-  position: relative;
-  width: 100%;
-  max-width: 800px;         /* Evita que el video quede gigante en monitores grandes */
-  margin: 2.5rem auto;      /* Centra el video y le da espacio arriba y abajo */
-  aspect-ratio: 16 / 9;     /* Truco moderno para mantener el formato de pantalla ancha */
-  border-radius: 12px;      /* Bordes redondeados estéticos */
-  overflow: hidden;         /* Hace que el video respete los bordes redondeados */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); /* Sombra sutil para darle profundidad */
-}
-
-/* El iframe se estira por completo dentro de su contenedor */
-.contenedor-video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
