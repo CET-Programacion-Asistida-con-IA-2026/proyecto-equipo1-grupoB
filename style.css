@@ -608,3 +608,24 @@ footer p {
   }
 }
 
+/* Fuerza al video a ocupar todo el ancho superior sin alterar las tarjetas */
+#quienes {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el título y el video */
+}
+
+.contenedor-video {
+  width: 100%;
+  max-width: 800px; /* Podés subir este número (ej: 900px) si lo querés todavía más grande */
+  margin: 2rem auto 3rem auto; /* Le da espacio respecto a las tarjetas de abajo */
+}
+
+/* Esto asegura que las tarjetas se sigan viendo en fila una al lado de la otra */
+.pilares-organizacion {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px; /* Espaciado entre tarjetas */
+}
