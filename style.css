@@ -608,31 +608,23 @@ footer p {
   }
 }
 
-/* ==========================================
-   Contenedor Principal de la Sección
-   ========================================== */
+/* ==========================================================================
+   ESTILOS PARA EL VIDEO (Sin alterar las tarjetas)
+   ========================================================================== */
 
-/* Centra el título y el video de forma vertical */
-#quienes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-/* El cuadro contenedor (Tu recuadro rojo) */
+/* Centra el video dentro de la sección sin convertir a #quienes en flex */
 .contenedor-video {
   position: relative;
   width: 100%;
-  max-width: 850px; /* Tamaño del cuadro rojo */
-  aspect-ratio: 16 / 9; /* Mantiene la proporción */
-  margin: 2rem auto 3rem auto;
+  max-width: 850px;      /* Tamaño exacto de tu cuadro rojo */
+  aspect-ratio: 16 / 9;  /* Proporción de pantalla ancha */
+  margin: 2rem auto 3.5rem auto; /* Lo centra y le da un buen espacio antes de las tarjetas */
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-/* Fuerza al video a estirarse en todo el cuadro rojo */
+/* Fuerza al reproductor de Drive a ocupar TODO el cuadro rojo */
 .contenedor-video iframe {
   position: absolute;
   top: 0;
